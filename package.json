@@ -1,11 +1,11 @@
 {
   "name": "scheduling-multidate",
-  "version": "0.1.5",
+  "version": "1.0.1",
   "description": "Multidate component helps showing the date for schedule (estimated, baselines, fact) with tolerance",
   "main": "dist/multidate.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp src/*.css dist",
+    "build": "npm run clean && tsc && cp src/*.css dist && cp src/*.svg dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint \"src/*.{js,ts,jsx,tsx}\"",
