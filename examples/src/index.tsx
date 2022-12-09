@@ -1,7 +1,6 @@
-import MLString from 'mlstring';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MultiDate, { IMultiDate, MULTIDATE_EXTERIOR_SUPERBRIEF, MULTIDATE_EXTERIOR_FULL, MULTIDATE_EXTERIOR_BRIEF } from './components/multidate.tsx';
+import MultiDate, { IMultiDate, MULTIDATE_EXTERIOR_SUPERBRIEF, MULTIDATE_EXTERIOR_FULL, MULTIDATE_EXTERIOR_BRIEF } from 'scheduling-multidate';
 import './index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
