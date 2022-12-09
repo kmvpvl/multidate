@@ -1,8 +1,0 @@
-<svg viewbox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-<style>
-</style>
-<circle cx="8" cy="8" r="6" fill="#a7FFa7" stroke="gray"/>
-<line x1="8" y1="4" x2="8" y2="12" stroke="black"/>
-<line x1="4" y1="8" x2="8" y2="4" stroke="black"/>
-<line x1="12" y1="8" x2="8" y2="4" stroke="black"/>
-</svg>
