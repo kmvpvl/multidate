@@ -6,26 +6,26 @@ import './index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const tmd: IMultiDate = {
-  title: new MLString({
+  title: {
     default: 'Multidate data',
     values: new Map<string, string>([
       ['de', ''],
-      ['de', ''],
-      ['de', ''],
-      ['de', ''],
+      ['fr', ''],
+      ['es', ''],
+      ['uk', ''],
       ['ru', 'Дата для планирования']
     ])
-  }),
-  subtitle: new MLString({
+  },
+  subtitle: {
     default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     values: new Map<string, string>([
       ['de', ''],
-      ['de', ''],
-      ['de', ''],
-      ['de', ''],
+      ['fr', ''],
+      ['es', ''],
+      ['uk', ''],
       ['ru', 'Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду Макклинтоку.']
     ])
-  }),
+  },
 
   estimated: {
     datepoint: new Date('2022-07-11T05:00:00.000+00:00'),

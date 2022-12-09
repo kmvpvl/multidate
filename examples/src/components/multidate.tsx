@@ -169,7 +169,7 @@ class MultiDate extends React.Component<IMultiDate, IMultiDateExterior> {
             onMouseEnter={() => this.showMinDetails(true)}
             onMouseLeave={() => this.showMinDetails(false)}>
           <span className='multidate-title'>
-              {this.props.title.toString()}
+              {new MLString(this.props.title).toString()}
             </span>
             {this.state.showMinDetailsButtons?<span ref={this.detailButton} className='multidate-details-button'
             onClick={() => this.changeExteriorStyle('full')}
@@ -199,12 +199,12 @@ class MultiDate extends React.Component<IMultiDate, IMultiDateExterior> {
             onMouseEnter={() => this.showMinDetails(true)}
             onMouseLeave={() => this.showMinDetails(false)}>
             <span className='multidate-title'>
-                {this.props.title.toString()}
+                {new MLString(this.props.title).toString()}
             </span>
             {this.state.showMinDetailsButtons?<span ref={this.minButton} className="multidate-min-button"
             onClick={() => this.changeExteriorStyle('brief')}
             ></span>:null}
-          {this.props.subtitle?<span className='multidate-subtitle'>{this.props.subtitle.toString()}</span>:null}
+          {this.props.subtitle?<span className='multidate-subtitle'>{new MLString(this.props.subtitle).toString()}</span>:null}
           <span className='multidate-full-dates'>
             <span className=''>{strEst.toString()}</span>
             <span>{this.getDateTimeString(this.props.estimated)}<span className='multidate-tolerance'>{this.getToleranceString(this.props.estimated)}</span></span>
