@@ -6,7 +6,7 @@ import './index.css'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const tmd: IMultiDate = {
   title: {
-    default: 'Multidate data',
+    default: 'Scheduling Multidate',
     values: new Map<string, string>([
       ['de', ''],
       ['fr', ''],
@@ -18,10 +18,10 @@ const tmd: IMultiDate = {
   subtitle: {
     default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     values: new Map<string, string>([
-      ['de', ''],
-      ['fr', ''],
-      ['es', ''],
-      ['uk', ''],
+      ['de', 'Lorem ipsum ist ein klassischer „Fisch“-Text. Es ist ein verzerrter Auszug aus der philosophischen Abhandlung von Mark Tullius Cicero „On the Limits of Good and Evil“, geschrieben 45 v. e. in Latein wird die Entdeckung der Ähnlichkeit Richard McClintock zugeschrieben.'],
+      ['fr', 'Lorem ipsum est un texte de "poisson" classique. Il s\'agit d\'un extrait déformé du traité philosophique de Mark Tullius Cicéron "Sur les limites du bien et du mal", écrit en 45 av. e. en latin, la découverte de la ressemblance est attribuée à Richard McClintock.'],
+      ['es', 'Lorem ipsum es un texto clásico de "peces". Es un extracto distorsionado del tratado filosófico de Mark Tullius Cicero "Sobre los límites del bien y del mal", escrito en el 45 a. mi. en latín, el descubrimiento de la semejanza se atribuye a Richard McClintock.'],
+      ['uk', 'Lorem ipsum – класичний текст-«риба». Є спотвореним уривком з філософського трактату Марка Тулія Цицерона «Про межі добра і зла», написаного 45 року до зв. е. латинською мовою, виявлення подібності приписується Річарду Макклінтоку.'],
       ['ru', 'Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду Макклинтоку.']
     ])
   },

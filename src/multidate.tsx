@@ -2,10 +2,47 @@ import * as React from 'react'
 import MLString, { IMLString } from 'mlstring'
 import './multidate.css'
 
-const strEst = new MLString({ default: 'Estimated', values: new Map([['ru', 'Ожидается']]) })
-const strBL = new MLString({ default: 'Baseline', values: new Map([['ru', 'ПоПлану']]) })
-const strFact = new MLString({ default: 'Factual', values: new Map([['ru', 'Факт']]) })
-const strBLShort = new MLString({ default: 'BL', values: new Map([['ru', 'БП']]) })
+const strEst = new MLString({ 
+  default: 'Estimated', 
+  values: new Map([
+  ['de', 'Vermutet'],
+  ['fr', 'Censé'],
+  ['es', 'Supuesto'],
+  ['uk', 'Очікуваний'],
+  ['ru', 'Ожидаемая']
+  ]) 
+})
+const strFact = new MLString({ 
+  default: 'Factual', 
+  values: new Map([
+    ['de', 'Tatsächliches'],
+    ['fr', 'Factuelle'],
+    ['es', 'Fecha real'],
+    ['uk', 'Фактична'],
+    ['ru', 'Факт']
+  ]) 
+})
+
+const strBLShort = new MLString({ 
+  default: 'BL',
+  values: new Map<string, string>([
+    ['de', 'GL'],
+    ['fr', 'LdB'],
+    ['es', 'LdB'],
+    ['uk', 'БП'],
+    ['ru', 'БП']
+  ])
+})
+const strBaselines = new MLString({
+  default: 'Baselines',
+  values: new Map<string, string>([
+    ['de', 'Grundlinien'],
+    ['fr', 'Lignes de base'],
+    ['es', 'Líneas de base'],
+    ['uk', 'Базові плани'],
+    ['ru', 'Базовые планы']
+  ])
+})
 type MultiDateStyle = 'full' | 'brief' | 'superbrief'
 
 export interface IDateRange {
@@ -210,7 +247,7 @@ class MultiDate extends React.Component<IMultiDate, IMultiDateExterior> {
             <span>{this.getDateTimeString(this.props.estimated)}<span className='multidate-tolerance'>{this.getToleranceString(this.props.estimated)}</span></span>
           {this.props.factual?
             (<><span className=''>{strEst.toString()}</span><span>{this.getDateTimeString(this.props.factual)}</span></>):null}
-            <span>Baselines</span><span></span>
+            <span>{strBaselines.toString()}</span><span></span>
             {this.props.baseline?Array.from(this.props.baseline.keys()).map (
               (v, k) => <React.Fragment key={k}><span className='multidate-full-date-caption'>{v}</span><span>{this.getDateTimeString(this.props.baseline?this.props.baseline.get(v):undefined)}<span className='multidate-tolerance'>{this.getToleranceString(this.props.baseline?this.props.baseline.get(v):undefined)}</span></span></React.Fragment>):null}
           </span>
