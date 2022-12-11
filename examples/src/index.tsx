@@ -8,10 +8,10 @@ const tmd: IMultiDate = {
   title: {
     default: 'Scheduling Multidate',
     values: new Map<string, string>([
-      ['de', ''],
-      ['fr', ''],
-      ['es', ''],
-      ['uk', ''],
+      ['de', 'Planungsdatum'],
+      ['fr', 'Date de planification'],
+      ['es', 'Fecha de planificación'],
+      ['uk', 'Дата планування'],
       ['ru', 'Дата для планирования']
     ])
   },
